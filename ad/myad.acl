@@ -41,13 +41,6 @@
 (^|\.)a1\.cnblogs\.com.*$
 
 #yahoo
-#test
-(^|\.)b8\.yahoo\.co\.jp.*$
-(^|\.)ybx\.yahoo\.co\.jp.*$
-(^|\.)ib\.adnxs\.com.*$
-(^|\.)rdsig\.yahoo\.co\.jp.*$
-(^|\.)yjtag\.yahoo\.co\.jp.*$
-(^|\.)b\.hatena\.ne\.jp.*$
 
 #csdn
 (^|\.)rabc1\.iteye\.com.*$
@@ -85,9 +78,6 @@
 (^|\.)cdn\.onesignal\.com.*$
 .*\.amanad\.adtdp\.com.*$
 (^|\.)j\.amoad\.com.*$
-##测试
-(^|\.)js\.gsspcln\.jp.*$
-(^|\.)googletagservices\.com.*$
 
 #facebook
 

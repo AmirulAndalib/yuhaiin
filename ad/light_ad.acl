@@ -160,7 +160,6 @@
 .*\.astrategy\.beacon\.qq\.com.*$
 .*\.atanx2\.alicdn\.com.*$
 .*\.atanx\.alicdn\.com.*$
-(^|\.)b8\.yahoo\.co\.jp.*$
 ^baichuan\.baidu\.com.*$
 #baidu
 # Baidu.*$
@@ -175,7 +174,6 @@
 ^bdimg\.share\.baidu\.com.*$
 ^bdplus\.baidu\.com.*$
 (^|\.)beacon\.tingyun\.com.*$
-(^|\.)b\.hatena\.ne\.jp.*$
 # Bilibili.*$
 .*\.biyong\.info.*$
 .*bllo\.hsq3z\.com.*$
@@ -330,7 +328,6 @@
 .*\.gma\.alicdn\.com.*$
 (^|\.)googleadservices\.com.*$
 # Google Analytics.*$
-(^|\.)googletagservices\.com.*$
 (^|\.)gorgon\.youdao\.com.*$
 .*g\.sdk\.look\.360\.cn.*$
 .*\.guanggao\..*$
@@ -360,7 +357,6 @@
 (^|\.)ia\.51\.la.*$
 (^|\.)iad\.g\.163\.com.*$
 ##iask_sina
-(^|\.)ib\.adnxs\.com.*$
 (^|\.)icon\.51\.la.*$
 (^|\.)icon\.users\.51\.la.*$
 ^idm\.bce\.baidu\.com.*$
@@ -398,7 +394,6 @@
 (^|\.)js3\.users\.51\.la.*$
 .*\.jsadsdisplay\.cn-beijing\.log\.aliyuncs\.com.*$
 (^|\.)js\.ad-stir\.com.*$
-(^|\.)js\.gsspcln\.jp.*$
 (^|\.)js\.hs-analytics\.net.*$
 ^js\.mbaidu\.top
 .*\.jsqmt\.qq\.com.*$
@@ -534,7 +529,6 @@
 (^|\.)rabc1\.iteye\.com.*$
 .*rd\.ane\.yahoo\.co\.jp.*$
 (^|\.)rd\.da\.netease\.com.*$
-(^|\.)rdsig\.yahoo\.co\.jp.*$
 .*rd\.wan\.360\.cn.*$
 .*rd\.yahoo\.co\.jp.*$
 .*\.recmd\.html5\.qq\.com.*$
@@ -761,8 +755,6 @@
 .*yads\.c\.yimg\.jp.*$
 #yahoo
 # Yahoo.*$
-(^|\.)ybx\.yahoo\.co\.jp.*$
-(^|\.)yjtag\.yahoo\.co\.jp.*$
 ^youxuan\.baidu\.com.*$
 (^|\.)yuanming\.net.*$
 (^|\.)zh-cn\.shenyun\.com.*$
@@ -780,7 +772,6 @@
 #币用
 #新浪新闻流
 #极光推送
-##测试
 #测试
 #熊掌id(疑似百度大数据搜集)
 #百度推广联盟
