@@ -12,6 +12,10 @@ cd ad
 . ./ad.sh
 cd ..
 
+cd SsrMicroClient
+. ./update.sh
+cd ..
+
 #cp cn/cn.acl cn.acl
 #cp ad/ad.acl ad.acl
 #cp ad/my_ad.acl my_ad.acl
