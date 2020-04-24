@@ -12,7 +12,7 @@ cd ad
 . ./ad.sh
 cd ..
 
-cd SsrMicroClient
+cd yuhaiin
 . ./update.sh
 cd ..
 
