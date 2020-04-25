@@ -6,5 +6,6 @@ cat accelerated-domains.china.conf | sed 's/server=\///g' | sed 's/\/114\.114\.1
 cat google.china.conf | sed 's/server=\///g' | sed 's/\/114\.114\.114\.114/ direct/g' >> yuhaiin.conf
 cat apple.china.conf | sed 's/server=\///g' | sed 's/\/114\.114\.114\.114/ direct/g' >> yuhaiin.conf
 cat ../cn/cn.acl | sed 's/$/ direct/g' >> yuhaiin.conf
+cat ../common/lan.acl | sed 's/$/ direct/g' >> yuhaiin.conf
 cat abroad.conf | sed 's/$/ proxy/g' >> yuhaiin.conf
 rm apple.china.conf google.china.conf accelerated-domains.china.conf
