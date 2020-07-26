@@ -407,6 +407,7 @@
 (^|\.)ads\.bigfoot\.com$
 (^|\.)ads\.bing\.com$
 (^|\.)ads\.bittorrent\.com$
+(^|\.)ads\.biz\.tr$
 (^|\.)ads\.blog\.com$
 (^|\.)ads\.bloomberg\.com$
 (^|\.)ads\.bluemountain\.com$
@@ -2772,6 +2773,7 @@
 (^|\.)revenuedirect\.com$
 (^|\.)revenuehits\.com$
 (^|\.)revive\.docmatic\.org$
+(^|\.)revive\.dubcnm\.com$
 (^|\.)revive\.netriota\.hu$
 (^|\.)revive\.plays\.bg$
 (^|\.)revlift\.io$
