@@ -18,10 +18,15 @@ cat yuhaiin.conf > yuhaiin_ad.conf
 cat pglyoyo.txt | sed $'s/\r$//' | sed '/*/!d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat ja_ad | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat ad_wars_hosts | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d | sed '1,2d' | sed '/^ *$/d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
+cat cn_ad.conf  | sed $'s/\r$//' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 
 # custom
-cat custom.conf >> yuhaiin.conf
-cat custom.conf >> yuhaiin_ad.conf
+cat custom.conf | sed '/#/'d  >> yuhaiin.conf
+cat custom.conf | sed '/#/'d >> yuhaiin_ad.conf
+
+# private
+cat yuhaiin_ad.conf > yuhaiin_my.conf
+cat private.conf >> yuhaiin_my.conf
 
 # DELETE
 rm apple.china.conf google.china.conf accelerated-domains.china.conf ad_wars_hosts pglyoyo.txt ja_ad
