@@ -3,7 +3,8 @@ wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/goo
 wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf -O accelerated-domains.china.conf
 wget https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts -O ad_wars_hosts
 wget "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblock&showintro=0&mimetype=plaintext" -O pglyoyo.txt
-wget https://logroid.github.io/adaway-hosts/hosts_no_white.txt -O ja_ad
+wget https://logroid.github.io/adaway-hosts/hosts.txt -O ja_ad
+wget https://logroid.github.io/adaway-hosts/hosts_allow.txt -O ja_ad_allow
 
 # DIRECT&PROXY
 cat accelerated-domains.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' > yuhaiin.conf
@@ -19,6 +20,7 @@ cat pglyoyo.txt | sed $'s/\r$//' | sed '/ *[Adblock] */d' | sed 's/$/ BLOCK/g' >
 cat ja_ad | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat ad_wars_hosts | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d | sed '1,2d' | sed '/^ *$/d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat cn_ad.conf  | sed $'s/\r$//' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
+cat ja_ad_allow | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ PROXY/g' >> yuhaiin_ad.conf
 cat yuhaiin.conf >> yuhaiin_ad.conf
 
 # custom
@@ -30,4 +32,4 @@ cat yuhaiin_ad.conf > yuhaiin_my.conf
 cat private.conf >> yuhaiin_my.conf
 
 # DELETE
-rm apple.china.conf google.china.conf accelerated-domains.china.conf ad_wars_hosts pglyoyo.txt ja_ad
+rm apple.china.conf google.china.conf accelerated-domains.china.conf ad_wars_hosts pglyoyo.txt ja_ad ja_ad_allow
