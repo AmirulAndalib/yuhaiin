@@ -25,6 +25,8 @@ cat common/start.acl ad/ad.acl common/zlstart.acl common/lan.acl cn/cn.acl \
     proxy/gfwlist.acl > aacl-temp.acl
 cat common/start.acl ad/light_ad.acl common/zlstart.acl common/lan.acl \
     cn/cn.acl proxy/gfwlist.acl > aacl-light-temp.acl
+cat common/start.acl ad/light_ad.acl common/zlstart.acl common/lan.acl \
+    cn/cn.acl proxy/gfwlist.acl proxy/custom.acl > aacl-light-custom-temp.acl
 cat common/start.acl common/zlstart.acl cn/cn_site.acl common/lan.acl cn/cn.acl \
     proxy/gfwlist.acl > aacl-none-temp.acl
 cat common/start.acl common/zlstart.acl common/lan.acl cn/cn.acl | \
@@ -32,6 +34,7 @@ cat common/start.acl common/zlstart.acl common/lan.acl cn/cn.acl | \
 cat aacl-temp.acl | sed 's///g' > aacl.acl
 # 注意这里使用Ctrl+V+M输入^M
 cat aacl-light-temp.acl | sed 's///g' > aacl-light.acl
+cat aacl-light-custom-temp.acl | sed 's///g' > aacl-light-custom.acl
 cat aacl-none-temp.acl | sed 's///g' > aacl-none.acl
 cat aacl-none-simple-temp.acl | sed 's///g' > aacl-none-simple.acl
 
