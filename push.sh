@@ -38,7 +38,7 @@ cat aacl-light-custom-temp.acl | sed 's///g' > aacl-light-custom.acl
 cat aacl-none-temp.acl | sed 's///g' > aacl-none.acl
 cat aacl-none-simple-temp.acl | sed 's///g' > aacl-none-simple.acl
 
-rm aacl-temp.acl aacl-light-temp.acl aacl-none-temp.acl aacl-none-simple-temp.acl
+rm aacl-temp.acl aacl-light-temp.acl aacl-light-custom-temp.acl aacl-none-temp.acl aacl-none-simple-temp.acl
 
 #rm cn.acl ad.acl my_ad.acl gfwlist.acl
 
