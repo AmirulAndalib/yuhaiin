@@ -26,7 +26,7 @@ cat ja_ad_allow | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^
 cat yuhaiin.conf >> yuhaiin_ad.conf
 
 # custom
-cat custom.conf | sed '/#/'d  >> yuhaiin.conf
+cat custom.conf | grep -v '^.* BLOCK$' | sed '/#/'d  >> yuhaiin.conf
 cat custom.conf | sed '/#/'d >> yuhaiin_ad.conf
 
 # private
