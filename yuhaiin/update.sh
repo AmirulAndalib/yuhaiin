@@ -15,6 +15,7 @@ cat apple.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\
 cat ../cn/cn.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat ../common/lan.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat abroad_ip.conf | sed 's/$/ PROXY/g' >> yuhaiin.conf
+cat bt.conf >> yuhaiin.conf
 
 # AD
 cat pglyoyo.txt | sed $'s/\r$//' | sed '/ *[Adblock] */d' | sed 's/$/ BLOCK/g' > yuhaiin_ad.conf
