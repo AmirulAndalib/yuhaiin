@@ -24,6 +24,9 @@ cat ja_ad | sed $'s/\r$//' | grep '#' | sed '1,9d' | sed 's/# /*\./g'| sed '/^ *
 cat ad_wars_hosts | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d | sed '1,2d' | sed '/^ *$/d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat cn_ad.conf  | sed $'s/\r$//' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat ja_ad_allow | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ PROXY/g' >> yuhaiin_ad.conf
+cat yuhaiin_ad.conf | sort -u | uniq > yuhaiin_ad_tmp.conf
+rm yuhaiin_ad.conf
+mv yuhaiin_ad_tmp.conf yuhaiin_ad.conf
 cat yuhaiin.conf >> yuhaiin_ad.conf
 
 # custom
