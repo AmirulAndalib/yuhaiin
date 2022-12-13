@@ -15,23 +15,24 @@ cat apple.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\
 cat ../cn/cn.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat ../common/lan.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat abroad_ip.conf | sed 's/$/ PROXY/g' >> yuhaiin.conf
+cat stream.conf >> yuhaiin.conf
 cat bt.conf >> yuhaiin.conf
 
 # AD
 cat pglyoyo.txt | sed $'s/\r$//' | sed '/ *[Adblock] */d' | sed 's/$/ BLOCK/g' > yuhaiin_ad.conf
 cat ja_ad | sed $'s/\r$//' | grep '#' | sed '1,9d' | sed 's/# /*\./g'| sed '/^ *$/d' | sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 # cat ja_ad | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
-cat ad_wars_hosts | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d | sed '1,2d' | sed '/^ *$/d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
+cat ad_wars_hosts | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/^#.*$/'d | sed '1,2d' | sed '/^ *$/d' |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
 cat cn_ad.conf  | sed $'s/\r$//' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ BLOCK/g' >> yuhaiin_ad.conf
-cat ja_ad_allow | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/#/'d  | sed '/^\s*$/d'  |sed 's/$/ PROXY/g' >> yuhaiin_ad.conf
+cat ja_ad_allow | sed $'s/\r$//' | sed 's/127.0.0.1 //g' | sed '/^#.*$/'d  | sed '/^\s*$/d'  |sed 's/$/ PROXY/g' >> yuhaiin_ad.conf
 cat yuhaiin_ad.conf | sort -u | uniq > yuhaiin_ad_tmp.conf
 rm yuhaiin_ad.conf
 mv yuhaiin_ad_tmp.conf yuhaiin_ad.conf
 cat yuhaiin.conf >> yuhaiin_ad.conf
 
 # custom
-cat custom.conf | grep -v '^.* BLOCK$' | sed '/#/'d  >> yuhaiin.conf
-cat custom.conf | sed '/#/'d >> yuhaiin_ad.conf
+cat custom.conf | grep -v '^.* BLOCK$' | sed '/^#.*$/'d | sed '/^$/d' >> yuhaiin.conf
+cat custom.conf | sed '/^#.*$/'d >> yuhaiin_ad.conf
 
 # private
 cat yuhaiin_ad.conf > yuhaiin_my.conf
