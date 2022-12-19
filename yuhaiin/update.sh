@@ -7,6 +7,11 @@ wget "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblock&showintro
 # wget https://logroid.github.io/adaway-hosts/hosts_allow.txt -O ja_ad_allow
 touch ja_ad ja_ad_allow
 
+# openwrt
+cat ../cn/cn.acl | sed 's/$/ DIRECT/g' > yuhaiin_openwrt.conf
+cat ../common/lan.acl | sed 's/$/ DIRECT/g' >> yuhaiin_openwrt.conf
+cat bt.conf >> yuhaiin.conf
+
 # DIRECT&PROXY
 cat abroad.conf | sed 's/^/\*\./g' | sed 's/$/ PROXY/g' > yuhaiin.conf
 cat accelerated-domains.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
@@ -34,6 +39,7 @@ cat yuhaiin.conf >> yuhaiin_ad.conf
 # custom
 cat custom.conf | grep -v '^.* BLOCK$' | sed '/^#.*$/'d | sed '/^$/d' >> yuhaiin.conf
 cat custom.conf | sed '/^#.*$/'d >> yuhaiin_ad.conf
+cat custom.conf | sed '/^#.*$/'d >> yuhaiin_openwrt.conf
 
 # private
 cat yuhaiin_ad.conf > yuhaiin_my.conf
