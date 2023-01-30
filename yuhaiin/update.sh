@@ -15,13 +15,13 @@ cat bt.conf >> yuhaiin.conf
 # DIRECT&PROXY
 cat abroad.conf | sed 's/^/\*\./g' | sed 's/$/ PROXY/g' > yuhaiin.conf
 cat accelerated-domains.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
-cat google.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
-cat apple.china.conf | sed $'s/\r$//' | sed 's/server=\//\*\./g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
+cat google.china.conf | sed $'s/\r$//' | sed 's/server=\///g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
+cat apple.china.conf | sed $'s/\r$//' | sed 's/server=\///g' | sed 's/\/114\.114\.114\.114/ DIRECT/g' >> yuhaiin.conf
 cat ../cn/cn.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat ../common/lan.acl | sed 's/$/ DIRECT/g' >> yuhaiin.conf
 cat abroad_ip.conf | sed 's/$/ PROXY/g' >> yuhaiin.conf
 cat stream.conf >> yuhaiin.conf
-cat fcm.conf >> yuhaiin.conf
+cat google.conf >> yuhaiin.conf
 cat bt.conf >> yuhaiin.conf
 
 # AD
